@@ -48,8 +48,6 @@ QTableWidgetItem* MainWindow::calculateItem(int func, double grad){
     switch (func) {
         case sin: {
             newItem = new QTableWidgetItem(tr("%1").arg(qSin(grad)));
-            newItem->setData(0x03, "Guess what?"); // <- this will be the tooltip text("asdasd");
-
             break;
         }
 
@@ -63,7 +61,7 @@ QTableWidgetItem* MainWindow::calculateItem(int func, double grad){
         }
     }
     newItem->setBackgroundColor(Qt::black);
-   // newItem->setToolTip(newItem->text());
+    newItem->setToolTip(newItem->text());
     return newItem;
 }
 
